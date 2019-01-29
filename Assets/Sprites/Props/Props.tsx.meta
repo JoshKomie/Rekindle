@@ -1,0 +1,51 @@
+fileFormatVersion: 2
+guid: 073b611b7b50d294788b24a522587ebd
+ScriptedImporter:
+  fileIDToRecycleName:
+    2800000: Atlas_Props_1
+    11400000: _TilesetScriptObject
+    11400002: _superAsset
+    11400004: Tile_Props_1
+    11400006: Tile_Props_2
+    11400008: Tile_Props_3
+    11400010: Tile_Props_4
+    11400012: Tile_Props_5
+    11400014: Tile_Props_6
+    11400016: Tile_Props_7
+    11400018: Tile_Props_8
+    11400020: Tile_Props_9
+    11400022: Tile_Props_12
+    11400024: Tile_Props_15
+    11400026: Tile_Props_16
+    11400028: Tile_Props_18
+    21300000: Sprite_Props_1
+    21300002: Sprite_Props_2
+    21300004: Sprite_Props_3
+    21300006: Sprite_Props_4
+    21300008: Sprite_Props_5
+    21300010: Sprite_Props_6
+    21300012: Sprite_Props_7
+    21300014: Sprite_Props_8
+    21300016: Sprite_Props_9
+    21300018: Sprite_Props_12
+    21300020: Sprite_Props_15
+    21300022: Sprite_Props_16
+    21300024: Sprite_Props_18
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  errors:
+  - Invalid rectangle object Id '1' in tileset 'Props' has zero height
+  - Invalid rectangle object Id '2' in tileset 'Props' has zero height
+  - Invalid rectangle object Id '3' in tileset 'Props' has zero height
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  pixelsPerUnit: 16
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 29
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048
