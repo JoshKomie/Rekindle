@@ -219,7 +219,7 @@ public class Npc : MonoBehaviour
     }
 
     public void Unlock() {
-        campfire.SetActive(true);
+        /* campfire.SetActive(true); */
         level = 1;
 
     }
