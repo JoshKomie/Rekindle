@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 162715124}
   - component: {fileID: 4081784018538274818}
   m_Layer: 0
-  m_Name: Doctor
+  m_Name: Bard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 597959271
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be00afa5608c04447b2b48f0e235416b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1115b84dee313548bf7497fb401c86a, type: 3}
   m_Color: {r: 0.9150943, g: 0.8019556, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 804dfc0011ea8d14bb868015a3b3a38a, type: 3}
   - {fileID: 8300000, guid: ef6317905d941984ab8cdfcf4ef2a1a3, type: 3}
   requiredItem: Cloth
-  name: Lumberjack
+  name: Bard
   relevantItems: []
   nothingToSay: NOTHING TO SAY
   requiredItemAbsent: I need cloth
@@ -184,7 +184,7 @@ Animator:
   m_GameObject: {fileID: 162715123}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 36aa47b0c19833c41ac4ad5742e97219, type: 2}
+  m_Controller: {fileID: 9100000, guid: c03fb6324cf019645ace3ec6e9019355, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

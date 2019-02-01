@@ -9,9 +9,16 @@ public class PlayerMovement : MonoBehaviour
     private float distCovered = 0f;
     public GameObject dialogueWindow;
     public GameObject npcInteract;
+
+    private Animator animator;
+    private bool isMoving = false, previousIsMoving = false;
+    private SpriteRenderer spriteRenderer;
+
     void Start()
     {
        StartDay(); 
+       animator = GetComponent<Animator>();
+       spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void StartDay() {
@@ -45,12 +52,22 @@ public class PlayerMovement : MonoBehaviour
 
         if (left) {
             this.transform.Translate(Vector2.left * finalSpeed * Time.deltaTime);
+            spriteRenderer.flipX = true;
         } else if (right){
             this.transform.Translate(Vector2.right * finalSpeed * Time.deltaTime);
+            spriteRenderer.flipX = false;
         }
 
+        previousIsMoving = isMoving;
         if (up || down || left || right) {
             distCovered += (finalSpeed * Time.deltaTime);
+            isMoving = true;
+        } else {
+            isMoving = false;
+        }
+
+        if (isMoving != previousIsMoving) {
+            animator.SetBool("is_moving", isMoving);
         }
         
     }

@@ -9,7 +9,7 @@ public class PlayerTorch : MonoBehaviour
 
     void Start()
     {
-        torch = transform.Find("Torch").gameObject;
+        /* torch = transform.Find("Torch").gameObject; */
         playerMovement = GetComponent<PlayerMovement>();
         
     }

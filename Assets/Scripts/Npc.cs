@@ -11,13 +11,13 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Npc : MonoBehaviour
 { 
-  public float satisfaction = 0;
-  public float[] contributionValue = new float[3];
-  
-  public string[] successStories = new string[3];
-  public string[] failureStories = new string[3];
-  public AudioClip[] successClips = new AudioClip[3];
-  public AudioClip[] failureClips = new AudioClip[3];
+    public float satisfaction = 0;
+    public float[] contributionValue = new float[3];
+
+    public string[] successStories = new string[3];
+    public string[] failureStories = new string[3];
+    public AudioClip[] successClips = new AudioClip[3];
+    public AudioClip[] failureClips = new AudioClip[3];
 
     /* private GameObject player; */
     /* public float interactDistance = 0.4f; */
@@ -54,128 +54,128 @@ public class Npc : MonoBehaviour
 
     public float getContributionValue(int disasterIndex)
     {
-      if (disasterIndex < 0 || disasterIndex > this.contributionValue.Length)
-      {
-        return 0;
-      }
-      else
-      {
-        return (this.contributionValue[disasterIndex] * this.satisfaction);
-      }
+        if (disasterIndex < 0 || disasterIndex > this.contributionValue.Length)
+        {
+            return 0;
+        }
+        else
+        {
+            return (this.contributionValue[disasterIndex] * this.satisfaction);
+        }
     }
 
     private string SuccessStory(int disasterIndex)
     {
-      if (disasterIndex < 0 || disasterIndex > this.successStories.Length)
-      {
-        return string.Empty;
-      }
-      else
-      {
-        if (this.getContributionValue(disasterIndex) < 1)
+        if (disasterIndex < 0 || disasterIndex > this.successStories.Length)
         {
-          return string.Empty;
+            return string.Empty;
         }
         else
         {
-          return this.successStories[disasterIndex];
+            if (this.getContributionValue(disasterIndex) < 1)
+            {
+                return string.Empty;
+            }
+            else
+            {
+                return this.successStories[disasterIndex];
+            }
         }
-      }
     }
 
 
     private string FailureStory(int disasterIndex)
     {
-      if (disasterIndex < 0 || disasterIndex > this.successStories.Length)
-      {
-        return string.Empty;
-      }
-      else
-      {
-        if (this.getContributionValue(disasterIndex) < 1)
+        if (disasterIndex < 0 || disasterIndex > this.successStories.Length)
         {
-          return string.Empty;
+            return string.Empty;
         }
         else
         {
-          return this.failureStories[disasterIndex];
+            if (this.getContributionValue(disasterIndex) < 1)
+            {
+                return string.Empty;
+            }
+            else
+            {
+                return this.failureStories[disasterIndex];
+            }
         }
-      }
     }
 
     private AudioClip SuccessClip(int disasterIndex)
     {
-      if (disasterIndex < 0 || disasterIndex > this.successStories.Length)
-      {
-        return null;
-      }
-      else
-      {
-        if (this.getContributionValue(disasterIndex) < 1)
+        if (disasterIndex < 0 || disasterIndex > this.successStories.Length)
         {
-          return null;
+            return null;
         }
         else
         {
-          return this.successClips[disasterIndex];
+            if (this.getContributionValue(disasterIndex) < 1)
+            {
+                return null;
+            }
+            else
+            {
+                return this.successClips[disasterIndex];
+            }
         }
-      }
     }
 
 
     private AudioClip FailureClip(int disasterIndex)
     {
-      if (disasterIndex < 0 || disasterIndex > this.successStories.Length)
-      {
-        return null;
-      }
-      else
-      {
-        if (this.getContributionValue(disasterIndex) < 1)
+        if (disasterIndex < 0 || disasterIndex > this.successStories.Length)
         {
-          return null;
+            return null;
         }
         else
         {
-          return this.failureClips[disasterIndex];
+            if (this.getContributionValue(disasterIndex) < 1)
+            {
+                return null;
+            }
+            else
+            {
+                return this.failureClips[disasterIndex];
+            }
         }
-      }
     }
 
 
-  public string GetDisasterStory(int disasterIndex)
+    public string GetDisasterStory(int disasterIndex)
     {
-      if (this.satisfaction > 0)
-      {
-        return this.SuccessStory(disasterIndex);
-      }
-      else
-      {
-        return this.FailureStory(disasterIndex);
-      }
+        if (this.satisfaction > 0)
+        {
+            return this.SuccessStory(disasterIndex);
+        }
+        else
+        {
+            return this.FailureStory(disasterIndex);
+        }
     }
 
     public AudioClip GetDisasterAudioClip(int disasterIndex)
     {
-      if (this.satisfaction > 0)
-      {
-        return this.SuccessClip(disasterIndex);
-      }
-      else
-      {
-        return this.FailureClip(disasterIndex);
-      }
+        if (this.satisfaction > 0)
+        {
+            return this.SuccessClip(disasterIndex);
+        }
+        else
+        {
+            return this.FailureClip(disasterIndex);
+        }
     }
 
-  private GameObject player;
+    private GameObject player;
 
     void Start()
     {
         var playerMove = GameObject.FindObjectOfType<PlayerMovement>();
         player = playerMove.gameObject;
         inventory = this.player.GetComponent<Inventory>();
-        campfire = transform.Find("Campfire").gameObject;
-        campfire.SetActive(false);
+        /* campfire = transform.Find("Campfire").gameObject; */
+        /* campfire.SetActive(false); */
     }
 
     void Update() {
@@ -226,34 +226,34 @@ public class Npc : MonoBehaviour
 
     public string MissingItemMessage
     {
-      get
-      {
-        if (this.requiredItemAbsent.Contains("<X>"))
+        get
         {
-          var parts = this.requiredItemAbsent.Split(new string[] { "<", ">" }, StringSplitOptions.RemoveEmptyEntries);
-          string result = "";
-          foreach (var s in parts)
-          {
-            if (s == "X")
+            if (this.requiredItemAbsent.Contains("<X>"))
             {
-              result += this.conversations[0].requiredItem;
-            }
+                var parts = this.requiredItemAbsent.Split(new string[] { "<", ">" }, StringSplitOptions.RemoveEmptyEntries);
+                string result = "";
+                foreach (var s in parts)
+                {
+                    if (s == "X")
+                    {
+                        result += this.conversations[0].requiredItem;
+                    }
 
+                    else
+                    {
+
+                        result += s;
+                    }
+                }
+
+                return result;
+            }
             else
             {
-
-              result += s;
+                return this.requiredItemAbsent;
             }
-          }
 
-          return result;
         }
-        else
-        {
-          return this.requiredItemAbsent;
-        }
-        
-      }
     }
 
 
