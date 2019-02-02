@@ -461,7 +461,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2093719393
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1473330640
@@ -787,7 +787,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 577c69ddf63766d408b37395f9ce04e6, type: 3}
-  m_Color: {r: 0.9150943, g: 0.8019556, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -846,7 +846,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 769c91b054eb2e446960b53e2273bf47, type: 3}
   - {fileID: 0}
   - {fileID: 8300000, guid: fa315d4dc4cce9648a343f4284a1799c, type: 3}
-  requiredItem: 
+  requiredItem: Spices
   name: Hunter
   relevantItems: []
   nothingToSay: NOTHING TO SAY
@@ -865,8 +865,9 @@ MonoBehaviour:
     - "This meat a\u2019int no good without a little sumthin\u2019, y\u2019know? Y\u2019bring
       me something to make it taste good, I can get ye somethin\u2019 a little warmer."
   - requiredLevel: 0
-    requiredItem: 
-    giveItem: {fileID: 0}
+    requiredItem: Spice
+    giveItem: {fileID: 2694243031011079824, guid: f07509fce1fa1134eaf911dee56e3ea1,
+      type: 3}
     conversationStrings:
     - "Ay! There we \u2018ave \u2018em."
     - (he pours a gratuitous amount of spice on the cooked meat, and hands some to

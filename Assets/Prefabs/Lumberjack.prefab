@@ -153,7 +153,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bfe56ae694d7bb246a5e1ffa7413980a, type: 3}
-  m_Color: {r: 0.9150943, g: 0.8019556, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 15306db7fe6366f4e8c9572e21f33f51, type: 3}
   - {fileID: 8300000, guid: f1be2d50e82f4ae498e8121061529dee, type: 3}
   - {fileID: 0}
-  requiredItem: 
+  requiredItem: Ale
   name: Lumberjack
   relevantItems: []
   nothingToSay: NOTHING TO SAY
@@ -229,7 +229,8 @@ MonoBehaviour:
     - Take it.
   - requiredLevel: 0
     requiredItem: 
-    giveItem: {fileID: 0}
+    giveItem: {fileID: 2694243031011079824, guid: bbc8a69f118fff54da6220a82be54e7f,
+      type: 3}
     conversationStrings:
     - '(For the first time, you think the woodsman smiles, as he grabs the ale from
       your hand.) '
@@ -654,7 +655,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2093719393
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1224400293
