@@ -559,7 +559,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2093719393
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &3181590432103861901
@@ -804,7 +804,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 330c7aafdc768844ea6a3803fd17f1b8, type: 3}
-  m_Color: {r: 0.9150943, g: 0.8019556, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -863,7 +863,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6fbf942598934fc41b737004e6437833, type: 3}
   - {fileID: 0}
   - {fileID: 8300000, guid: 9f3ec20976a5457449084689517a2043, type: 3}
-  requiredItem: 
+  requiredItem: Medicine
   name: Chef
   relevantItems: []
   nothingToSay: I HAVE NOTHING TO SAY
@@ -887,7 +887,8 @@ MonoBehaviour:
       - please, do let me know.
   - requiredLevel: 0
     requiredItem: Medicine
-    giveItem: {fileID: 0}
+    giveItem: {fileID: 2694243031011079824, guid: 32bfcb672f3c0b9418bd89bec95cb840,
+      type: 3}
     conversationStrings:
     - "My goodness, this sort of remedy is hard to make! Well, at least, from a chef\u2019s
       point of view, you know what I mean? I\u2019m no apothecary."

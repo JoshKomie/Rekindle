@@ -415,7 +415,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f931a864ff7cdf1408749a07e76bc134, type: 3}
-  m_Color: {r: 0.9150943, g: 0.8019556, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7fae5658165e8fd448bc95738863964c, type: 3}
   - {fileID: 8300000, guid: a23474c984ec5df40b45ddb6376ac1e6, type: 3}
   - {fileID: 0}
-  requiredItem: 
+  requiredItem: Pelt
   name: Tailor
   relevantItems: []
   nothingToSay: I HAVE NOTHING TO SAY
@@ -492,7 +492,8 @@ MonoBehaviour:
     - Come find me when you have something a little more vogue.
   - requiredLevel: 0
     requiredItem: Pelts
-    giveItem: {fileID: 0}
+    giveItem: {fileID: 2694243031011079824, guid: 1c045e13ca74b1e4fbd7b859d310fbc6,
+      type: 3}
     conversationStrings:
     - Animal fur, hmm?
     - "I see you\u2019ve taken the liberty to have had it cleaned."
@@ -660,7 +661,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2093719393
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &7528508499259749725

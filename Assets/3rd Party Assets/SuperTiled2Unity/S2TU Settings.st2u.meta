@@ -14,7 +14,7 @@ ScriptedImporter:
   warnings: []
   missingSortingLayers: []
   missingLayers: []
-  version: 1.1.9
+  version: 1.1.10
   pixelsPerUnit: 16
   edgesPerEllipse: 32
   animationFramerate: 20
