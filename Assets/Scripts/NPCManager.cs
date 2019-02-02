@@ -128,6 +128,7 @@ public class NPCManager : MonoBehaviour
               finalStory += s + " ";
             }
 
+            Debug.Log("as="+ audioStory.Count);
 
             UnityEngine.Debug.Log(audioStory.Count +" : "+ audioStory);
             if ((audioStory.Count > 0) && SoundManager.instance!=null)
@@ -139,14 +140,14 @@ public class NPCManager : MonoBehaviour
 
             if (points <= 0)
             {
-              this.disasterResultText.text = "Thanks for your help, but unfortunately your deliveries couldn't help.";
+                disasterResultText.text =
+                  "None of your villagers helped mitigate the disaster. Try talking to them with their desired items.";
             }
             else
             {
               if (story.Count < 1  && audioStory.Count < 1)
               {
-                disasterResultText.text =
-                  "None of your villagers helped mitigate the disaster. Try talking to them with their desired items.";
+                  this.disasterResultText.text = "Thanks for your help, but unfortunately your deliveries couldn't help.";
               }
               else
               {
