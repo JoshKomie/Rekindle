@@ -48,7 +48,6 @@ public class SoundManager : MonoBehaviour
       if (endTimer <= 0)
       {
         startNextClip();
-        endTimer = 0;
       }
     }
 
@@ -59,6 +58,7 @@ public class SoundManager : MonoBehaviour
         theAudioSource.clip = theClipList[0];
         theClipList.RemoveAt(0);
         endTimer = theAudioSource.clip.length;
+        theAudioSource.Play();
       }
     }
 }
