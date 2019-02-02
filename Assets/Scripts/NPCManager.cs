@@ -14,18 +14,7 @@ public class NPCManager : MonoBehaviour
   public Npc activeNPC = null;
 
   public PlayerMovement Player = null;
-
-  private int currentDisaster = 0;
-  private float timeUntilNextDisaster = 0;
   
-  public UnityEngine.UI.Text disasterResultText;
-  public UnityEngine.UI.Text disasterHeaderText;
-  public UnityEngine.UI.Text scoreText;
-  public GameObject disasterResultPanel;
-
-  public float totalPoints = 0.0f;
-
-  public float DISASTER_DURATION = 80.0f;
 
   public List<string> MakeDisasterStory(int disasterIndex)
   {
@@ -59,7 +48,6 @@ public class NPCManager : MonoBehaviour
 
   void Awake()
   {
-    this.timeUntilNextDisaster = this.DISASTER_DURATION;
     if (instance != null)
       GameObject.Destroy(gameObject);
     else
@@ -110,81 +98,5 @@ public class NPCManager : MonoBehaviour
       }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        timeUntilNextDisaster -= Time.deltaTime;
-        if (timeUntilNextDisaster < 1) {
-            List<string> story = MakeDisasterStory(currentDisaster);
-            List<AudioClip> audioStory = MakeAudioStory(this.currentDisaster);
-            UnityEngine.Debug.Log(story);
-            float points = getCurrentInventoryPoints(currentDisaster);
-            totalPoints += points;
-            disasterResultPanel.SetActive(true);
-            disasterHeaderText.text = "A " +  DisasterName(currentDisaster) + " Occurred!";
-            string finalStory = "";
-            foreach (var s in story)
-            {
-              finalStory += s + " ";
-            }
-
-            Debug.Log("as="+ audioStory.Count);
-
-            UnityEngine.Debug.Log(audioStory.Count +" : "+ audioStory);
-            if ((audioStory.Count > 0) && SoundManager.instance!=null)
-                {
-                  SoundManager.instance.PlayAudioList(audioStory);
-                }
-
-
-
-            if (points <= 0)
-            {
-                disasterResultText.text =
-                  "None of your villagers helped mitigate the disaster. Try talking to them with their desired items.";
-            }
-            else
-            {
-              if (story.Count < 1  && audioStory.Count < 1)
-              {
-                  this.disasterResultText.text = "Thanks for your help, but unfortunately your deliveries couldn't help.";
-              }
-              else
-              {
-                disasterResultText.text = finalStory;
-              }
-            }
-
-            /* if (totalPoints != null) { */
-            /*     scoreText.text = totalPoints.ToString(); */
-            /* } */
-            clearCurrentInventoryPoints();
-
-            currentDisaster++;
-            timeUntilNextDisaster = DISASTER_DURATION;
-        }
-      /*
-      float minDist = 1000000;
-      this.activeNPC = null;
-      if (Player)
-      {
-        foreach (var npc in this.theNPCs)
-        {
-          npc.isWithPlayer = false;
-          Debug.Log(npc.gameObject.name + " : " + npc.distanceFromPlayer);
-          npc.distanceFromPlayer = Vector3.Distance(Player.transform.position, npc.transform.position);
-          if (minDist < npc.distanceFromPlayer)
-          {
-            activeNPC = npc;
-            minDist = npc.distanceFromPlayer;
-          }
-        }
-
-        if (this.activeNPC)
-        {
-          this.activeNPC.isWithPlayer = true;
-        }
-      }*/
-    }
     
 }
