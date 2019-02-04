@@ -18,6 +18,7 @@ public class Inventory : MonoBehaviour {
     }
     public void Start() {
         items = new List<GameObject>();
+        inventoryText = GameObject.Find("InventoryText").GetComponent<Text>();
     }
 
     public void RemoveItem(string itemName)
